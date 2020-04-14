@@ -20,6 +20,8 @@ Użytkownik ma możliwość sprawdzenia wartości stałej używając wyrażenia:
 
 ```bash
 @nazwastałej
+@pi
+@e
 ```
 
 ### przypadek C
