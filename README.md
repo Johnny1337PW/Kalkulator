@@ -22,11 +22,8 @@ n = 4, wartosc = 4 * n - 3, wartosc
 
 ### Wypisanie stałej
 
-Użytkownik ma możliwość sprawdzenia wartości stałej używając wyrażenia:
+Użytkownik ma możliwość sprawdzenia wartości stałej używając wyrażenia '@nazwastałej':
 
-```bash
-@nazwastałej
-```
 np.
 ```bash
 @pi
@@ -38,6 +35,17 @@ np.
 ### Wczytanie równania z pliku
 
 Jest również możliwość wczytania odpowiedniego wyrażenia z pliku txt.
+
+np dla pliku nazwa_pliku.txt.
+```bash
+n = 2.5, i = 10, i * 5
+>>> 25
+```
+
+```bash
+$(sciezka_do_pliku/nazwa_pliku.txt)
+>>> 5
+```
 
 ### Obliczenie równania
 
