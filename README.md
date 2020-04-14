@@ -39,12 +39,11 @@ Jest również możliwość wczytania odpowiedniego wyrażenia z pliku txt.
 np dla pliku nazwa_pliku.txt.
 ```bash
 n = 2.5, i = 10, i * 5
->>> 25
 ```
 
 ```bash
 $(sciezka_do_pliku/nazwa_pliku.txt)
->>> 5
+>>> 25
 ```
 
 ### Obliczenie równania
