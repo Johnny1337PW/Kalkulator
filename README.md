@@ -42,7 +42,7 @@ n = 2.5, i = 10, i * 5
 ```
 
 ```bash
-$(sciezka_do_pliku/nazwa_pliku.txt)
+#(sciezka_do_pliku/nazwa_pliku.txt)
 >>> 25
 ```
 
