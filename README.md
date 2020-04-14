@@ -17,6 +17,7 @@ Użytkownik ma możliwość wpisania w kalkulatorze odpowiedniego równania z do
 np.
 ```bash
 n = 4, wartosc = 4 * n - 3, wartosc
+>>> 13
 ```
 
 ### Wypisanie stałej
@@ -29,7 +30,9 @@ Użytkownik ma możliwość sprawdzenia wartości stałej używając wyrażenia:
 np.
 ```bash
 @pi
+>>> 3.14159
 @e
+>>> 2.71828
 ```
 
 ### Wczytanie równania z pliku
