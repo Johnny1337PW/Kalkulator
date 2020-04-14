@@ -16,11 +16,15 @@ Użytkownik ma możliwość wpisania w kalkulatorze odpowiedniego równania z do
 
 ### przypadek B
 
-Użytkownik ma możliwość sprawdzenia wartości stałej używając wyrażenia @'stała'.
+Użytkownik ma możliwość sprawdzenia wartości stałej używając wyrażenia:
+
+'''bash
+@'stała'
+'''
 
 ### przypadek C
 
-Jest również możliwość wczytania odpowiedniego wyrażenia z przypadku A lub B z pliku txt.
+Jest również możliwość wczytania odpowiedniego wyrażenia z pliku txt.
 
 ## Diagram przypadków użycia
 
