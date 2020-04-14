@@ -41,8 +41,8 @@ np. dla pliku nazwa_pliku.txt:
 n = 2.5, i = 10, i * 5
 ```
 
-```bash
-#(sciezka_do_pliku/nazwa_pliku.txt)
+```java
+$(sciezka_do_pliku/nazwa_pliku.txt)
 >>> 25
 ```
 
