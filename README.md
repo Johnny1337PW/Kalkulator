@@ -21,3 +21,7 @@ Użytkownik ma możliwość sprawdzenia wartości stałej używając wyrażenia 
 ### przypadek C
 
 Jest również możliwość wczytania odpowiedniego wyrażenia z przypadku A lub B z pliku txt.
+
+## Diagram przypadków użycia
+
+![Schemat diagramu przypadków użycia](diag_przyp_uzycia.jpg)
