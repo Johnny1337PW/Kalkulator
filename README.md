@@ -18,9 +18,9 @@ Użytkownik ma możliwość wpisania w kalkulatorze odpowiedniego równania z do
 
 Użytkownik ma możliwość sprawdzenia wartości stałej używając wyrażenia:
 
-'''bash
-@'stała'
-'''
+```bash
+@nazwastałej
+```
 
 ### przypadek C
 
