@@ -18,7 +18,7 @@ Użytkownik ma możliwość wpisania w kalkulatorze odpowiedniego równania z do
 
 Użytkownik ma możliwość sprawdzenia wartości stałej używając wyrażenia:
 
-```python
+```bash
 @nazwastałej
 ```
 
