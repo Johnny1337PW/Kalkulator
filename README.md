@@ -60,3 +60,7 @@ np.
 ## Diagram przypadków użycia
 
 ![Schemat diagramu przypadków użycia](img/diagram_przypadkow.jpg)
+
+## Diagram klas
+
+![Schemat diagramu klas](img/)
