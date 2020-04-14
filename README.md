@@ -10,7 +10,7 @@ wczytanie wyrażenia z pliku.
 
 ## Opis słowny przypadków użycia
 
-### przypadek A
+### Obliczenie
 
 Użytkownik ma możliwość wpisania w kalkulatorze odpowiedniego równania z dowolną ilością znaków lub zmiennych po ich wcześniejszym przypisaniu. Wyrażenie program obliczy uwzględniając kolejność wykonywania działań matematycznych.
 
@@ -19,7 +19,7 @@ np.
 n = 4, wartosc = 4 * n - 3, wartosc
 ```
 
-### przypadek B
+### Wypisanie stałej
 
 Użytkownik ma możliwość sprawdzenia wartości stałej używając wyrażenia:
 
@@ -32,7 +32,7 @@ np.
 @e
 ```
 
-### przypadek C
+### Wczytanie równania z pliku
 
 Jest również możliwość wczytania odpowiedniego wyrażenia z pliku txt.
 
