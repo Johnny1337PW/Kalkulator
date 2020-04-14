@@ -12,12 +12,12 @@ wczytanie wyrażenia z pliku.
 
 ### przypadek A
 
-bla bla bla
+Użytkownik ma możliwość wpisania w kalkulatorze odpowiedniego równania z dowolną ilością znaków, które to wyrażenie program obliczy uwzględniając kolejność wykonywania działań matematycznych.
 
 ### przypadek B
 
-bla bla bla
+Użytkownik może przypisać wartości do zmiennych i podać równanie ze zmiennymi.
 
 ### przypadek C
 
-bla bla bla
+Jest również możliwość wczytania odpowiedniego wyrażenia z pliku txt.
