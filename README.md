@@ -36,6 +36,17 @@ np.
 
 Jest również możliwość wczytania odpowiedniego wyrażenia z pliku txt.
 
+### Obliczenie równania
+
+Użytkownik może wypisać wartość równania matematycznego bez deklarowania zmiennych.
+
+np.
+
+```bash
+(4 + 4) * 2
+>>> 16
+```
+
 ## Diagram przypadków użycia
 
 ![Schemat diagramu przypadków użycia](img/diagram_przypadkow.jpg)
