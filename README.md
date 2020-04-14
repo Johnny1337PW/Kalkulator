@@ -1,7 +1,7 @@
 # KALKULATOR
 
 Kalkulator obliczający wartość wyrażenia algebraicznego. Obsługuje operacje takie jak:
-+, -, \*, \\ , zmienne i przypisanie zmiennych np. n = 4, wartosc = 4 * n - 3. Obsługuje podstawowe stałe matematyczne. Kalkulator umożliwia także
++, -, \*, \\ , zmienne i przypisanie zmiennych np. "n = 4, wartosc = 4 * n - 3, wartosc". Obsługuje podstawowe stałe matematyczne. Kalkulator umożliwia także
 wczytanie wyrażenia z pliku.
 
 ## Użyte technolgie
@@ -14,6 +14,11 @@ wczytanie wyrażenia z pliku.
 
 Użytkownik ma możliwość wpisania w kalkulatorze odpowiedniego równania z dowolną ilością znaków lub zmiennych po ich wcześniejszym przypisaniu. Wyrażenie program obliczy uwzględniając kolejność wykonywania działań matematycznych.
 
+np.
+```bash
+n = 4, wartosc = 4 * n - 3, wartosc
+```
+
 ### przypadek B
 
 Użytkownik ma możliwość sprawdzenia wartości stałej używając wyrażenia:
@@ -21,7 +26,7 @@ Użytkownik ma możliwość sprawdzenia wartości stałej używając wyrażenia:
 ```bash
 @nazwastałej
 ```
-np:
+np.
 ```bash
 @pi
 @e
