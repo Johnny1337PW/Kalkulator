@@ -24,4 +24,4 @@ Jest również możliwość wczytania odpowiedniego wyrażenia z przypadku A lub
 
 ## Diagram przypadków użycia
 
-![Schemat diagramu przypadków użycia](diag_przyp_uzycia.jpg)
+![Schemat diagramu przypadków użycia](img/diagram_przypadkow.jpg)
