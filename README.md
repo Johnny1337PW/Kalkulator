@@ -7,3 +7,17 @@ wczytanie wyrażenia z pliku.
 ## Użyte technolgie
 
 - Java
+
+## Opis słowny przypadków użycia
+
+### przypadek A
+
+bla bla bla
+
+### przypadek B
+
+bla bla bla
+
+### przypadek C
+
+bla bla bla
