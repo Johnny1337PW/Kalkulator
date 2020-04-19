@@ -63,4 +63,4 @@ np.
 
 ## Diagram klas
 
-![Schemat diagramu klas](img/)
+![Schemat diagramu klas](img/diagram_klas.png)
