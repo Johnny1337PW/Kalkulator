@@ -5,9 +5,9 @@ Kalkulator obliczający wartość wyrażenia algebraicznego. Obsługuje operacje
 wczytanie wyrażenia z pliku.
 
 ## Członkowie projektu
-- Jan Lewandowski 300560
-- Jan Adamski 300472
-- Tomasz Kapuściński 303976
+- Jan Lewandowski - 300560
+- Jan Adamski - 300472
+- Tomasz Kapuściński - 303976
 
 ## Użyte technolgie
 
