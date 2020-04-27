@@ -69,3 +69,13 @@ np.
 ## Diagram klas
 
 ![Schemat diagramu klas](img/diagram_klas.png)
+
+## Algorytmy
+
+### Sprawdzanie poprawności domknięcia nawiasów
+Algorytm przyjmuje ciąg samych nawiasów użytych w równaniu i sprawdza czy każdy
+został poprawnie domknięty/otwarty. Wykorzystuję on metodę klasy String replaceAll(),
+polega na zastępywaniu każdej pary nawiasów np "()" lub "[]" na pusty String, robimy
+taką operacje aż w wejścowym Stringu zostanie pusty napis (jeśli nawiasy są otwierane
+i domykane poprawnie), lub brak par nawiasów występujących obok siebie ale nie pusty
+napis (jeśli nawiasy są otwierane lub zamykane nie poprawnie).
