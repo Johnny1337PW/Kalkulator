@@ -72,7 +72,7 @@ np.
 
 ## Algorytmy
 
-### Sprawdzanie poprawności domknięcia nawiasów
+### 1. Sprawdzanie poprawności domknięcia nawiasów
 Algorytm przyjmuje ciąg samych nawiasów użytych w równaniu i sprawdza czy każdy
 został poprawnie domknięty/otwarty. Wykorzystuję on metodę klasy String replaceAll(),
 polega na zastępywaniu każdej pary nawiasów np "()" lub "[]" na pusty String, robimy
