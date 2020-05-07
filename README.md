@@ -74,8 +74,6 @@ np.
 
 ### 1. Sprawdzanie poprawności domknięcia nawiasów w równaniu
 Algorytm przyjmuje ciąg samych nawiasów użytych w równaniu i sprawdza czy każdy
-został poprawnie domknięty/otwarty. Wykorzystuje on metodę klasy String replaceAll(),
-polega na zastępowaniu każdej pary nawiasów np "()" lub "[]" na pusty String, robimy
-taką operacje aż w wejścowym Stringu zostanie pusty napis (jeśli nawiasy są otwierane
-i domykane poprawnie), lub brak par nawiasów występujących obok siebie ale nie pusty
-napis (jeśli nawiasy są otwierane lub zamykane błędnie).
+został poprawnie domknięty/otwarty. Wykorzystuje on metody klasy Stack push() oraz 
+pop(), aby śledzić otwieranie i zamykanie nawiasów w napisie. Zwraca true jeśli
+wszystkie nawiasy są poprawnie otwarte i zamknięte, w przeciwnym wypadku zwraca false.
