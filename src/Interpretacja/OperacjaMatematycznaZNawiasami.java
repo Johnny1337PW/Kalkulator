@@ -6,17 +6,17 @@ public class OperacjaMatematycznaZNawiasami extends OperacjaMatematyczna {
     private String [] nawiasy= {"(", ")", "{", "}", "[", "]"};
 
     public String pobierzNawiasy(String operacjaZNawiasami) {
-        String sameNawiasy = "";
+        StringBuilder sameNawiasy = new StringBuilder();
 
         for(int i = 0; i < operacjaZNawiasami.length(); i++){
-            for(int j = 0; j < this.nawiasy.length; j++){
-                if(operacjaZNawiasami.charAt(i) == nawiasy[j].charAt(0)){
-                    sameNawiasy += operacjaZNawiasami.charAt(i);
+            for (String s : this.nawiasy) {
+                if (operacjaZNawiasami.charAt(i) == s.charAt(0)) {
+                    sameNawiasy.append(operacjaZNawiasami.charAt(i));
                 }
             }
         }
 
-        return sameNawiasy;
+        return sameNawiasy.toString();
     }
 
     public boolean sprawdzNawiasy(String operacjaZNawiasami) {
