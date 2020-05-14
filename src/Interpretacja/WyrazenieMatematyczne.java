@@ -45,7 +45,15 @@ public class WyrazenieMatematyczne extends OperacjaMatematycznaZNawiasami {
     public static void main(String[] args) {
         WyrazenieMatematyczne wm = new WyrazenieMatematyczne();
         String wyrazenie = "487-34";
+        String wyrazenie1="483+23";
+        String wyrazenie2="999/3";
+        String wyrazenie3="3*13";
+        String wyrazenie4="5^4";
 
         System.out.println(wm.interpretujWyrazenie(wyrazenie));
+        System.out.println(wm.interpretujWyrazenie(wyrazenie1));
+        System.out.println(wm.interpretujWyrazenie(wyrazenie2));
+        System.out.println(wm.interpretujWyrazenie(wyrazenie3));
+        System.out.println(wm.interpretujWyrazenie(wyrazenie4));
     }
 }
