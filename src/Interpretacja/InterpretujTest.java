@@ -79,8 +79,15 @@ public class InterpretujTest {
         testRówności("(25-21)*(3*3)", 36);//60
         testRówności("(2*3)*(3-3)", 0);//61
         testRówności("((2/2)*(3-2))", 1);//62
-
-
+        testRówności("(25-21)*(3*3)", 1);//60
+        testRówności("(2*3)*(3-3)", 1);//61
+        testRówności("((3-5))", -2);//62
+        testRówności("(5+2)-9", -2);
+        testRówności("(12*2)-(5*5)", -1);
+        testRówności("5-(12/2)", -1);
+        testRówności("(125*5)-((1000*5)/2)", 2154);
+        testRówności("((77)-122)*2", 5);
+        testRówności("((3*2)*3)-(4*2)-(18*9)+111111", 2);
 
     }
 }
