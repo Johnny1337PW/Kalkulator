@@ -7,7 +7,7 @@ public class InterpretujTest {
 
     public static void testRówności(String input, double value){
         testId += 1;
-        System.out.print("Test nr." + testId + " - result: ");
+        System.out.print("Test nr" + testId + " - result: ");
         if (Interpreter.interpretuj(input) == value) {
             System.out.print("good\n");
         }
