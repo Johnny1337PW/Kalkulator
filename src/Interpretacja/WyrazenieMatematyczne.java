@@ -20,7 +20,7 @@ public class WyrazenieMatematyczne extends OperacjaMatematycznaZNawiasami {
         int id_start = 0;
         for (int i = 0; i < wyrazenie.length(); i++) {
             if (wyrazenie.charAt(i) == ')') {
-                id_end = i;
+                id_end = i+1;
                 break;
             }
         }
@@ -30,16 +30,30 @@ public class WyrazenieMatematyczne extends OperacjaMatematycznaZNawiasami {
                 break;
             }
         }
-
-        interpretujOperacje("4+3");
+        String dzialanie = wyrazenie.substring(id_start, id_end);
+        String wynik = String.valueOf(interpretujOperacje(dzialanie.substring(1,dzialanie.length()-1)));
+        String finalny = wyrazenie.substring(0,id_start);
+        finalny += wynik;
+        finalny += wyrazenie.substring(id_end);
 
         //jezeli wyrazenie nie ma zadnych znakow oprocz liczb to zwroc wynik
-        if (false) {
+
+        if (!wyrazenie.contains("(") && !wyrazenie.contains(")") && !wyrazenie.contains("\\+") &&
+                !wyrazenie.contains("-") && !wyrazenie.contains("*") && !wyrazenie.contains("\\/"))
+        {
             return Double.valueOf(wyrazenie);
         }
 
-        obliczWyrazenie("");
-
+        else {
+            obliczWyrazenie(finalny);
+        }
         return 0.0;
     }
+
+    public static void main(String[] args) {
+        WyrazenieMatematyczne wm= new WyrazenieMatematyczne();
+        System.out.println(wm.obliczWyrazenie("((45-(1*3))+45)"));
+
+    }
 }
+
