@@ -1,5 +1,4 @@
 import java.io.*;
-import java.util.Scanner;
 
 public class ZPliku {
     public static void czytaj(String filePath)  {
@@ -23,6 +22,6 @@ public class ZPliku {
     }
 
     public static void main(String[] args) {
-        czytaj("D:\\sycyf_lab1\\aa.txt");//tu wpisujemy argument metody - sciezke do pliku. Do każdego slasha "\" należy dodać jeszcze jeden slash "\\"
+        czytaj("src\\dzialanie.txt");//tu wpisujemy argument metody - sciezke do pliku. Do każdego slasha "\" należy dodać jeszcze jeden slash "\\"
     }
 }
