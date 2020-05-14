@@ -13,15 +13,22 @@ public class Interpreter extends WyrazenieMatematyczne {
             System.out.println("Błąd przy użyciu stałej");
             return "0.0";
         }
-
-        for (int i = input.length() - 1; i > 0; i--) {
-            if (input.charAt(i) == '@') {
-                if (input.charAt(i - 3) == '@') {
-                    input = input.replace(input.substring(i - 3, i + 1), String.valueOf(Pamięć.getConstant(input.substring(i - 2, i))));
-                }
-                else {
-                    System.out.println("Błąd w użyciu stałej, źle ustawiony znak \"@\"");
-                    return "0.0";
+        while(input.contains("@")) {
+            for (int i = input.length() - 1; i >= 0; i--) {
+                if (input.charAt(i) == '@') {
+                    if(i - 3 >= 0) {
+                        if (input.charAt(i - 3) == '@') {
+                            input = input.replace(input.substring(i - 3, i + 1), String.valueOf(Pamięć.getConstant(input.substring(i - 2, i))));
+                        }
+                        else {
+                            System.out.println("Błąd w użyciu stałej, źle ustawiony znak \"@\"");
+                            return "0.0";
+                        }
+                    }
+                    else {
+                        System.out.println("Błąd w użyciu stałej, źle ustawiony znak \"@\"");
+                        return "0.0";
+                    }
                 }
             }
         }

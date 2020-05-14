@@ -29,7 +29,7 @@ public class Pamięć {
             return field.getDouble(p);
         }
         catch (NoSuchFieldException | IllegalAccessException e) {
-            System.out.println(e);
+            System.out.println("Brak stałej w bazie");
         }
         return 0.0;
     }
