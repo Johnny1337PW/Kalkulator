@@ -9,39 +9,43 @@ public class OperacjaMatematyczna {
             return Double.valueOf(wyrazenie);
         }
 
+        if(wyrazenie.contains("+-")) {
+            wyrazenie = wyrazenie.replace("+-", "-");
+        }
+
+        if(wyrazenie.contains("-+")) {
+            wyrazenie = wyrazenie.replace("-+", "-");
+        }
+
         if (wyrazenie.indexOf('-') == -1 && wyrazenie.indexOf('+') == -1 && wyrazenie.indexOf('*') == -1 && wyrazenie.indexOf('/') == -1) {
             System.out.println("Wprowadzono niepoprawne wyrażenie");
             return 0.0;
         }
-        else if (wyrazenie.indexOf('-') != -1){
-            String[] wyrazenieArray = null;
-            wyrazenieArray = wyrazenie.split("-");
-            double wynik = Double.parseDouble(wyrazenieArray[0])-Double.parseDouble(wyrazenieArray[1]);
-            return wynik;
-        }
-
-        else if (wyrazenie.indexOf('+') != -1)
-        {
-            String[] wyrazenieArray = null;
-            wyrazenieArray = wyrazenie.split("\\+");
-            double wynik = Double.parseDouble(wyrazenieArray[0])+Double.parseDouble(wyrazenieArray[1]);
-            return wynik;
-        }
-
         else if (wyrazenie.indexOf('*') != -1)
         {
             String[] wyrazenieArray = null;
             wyrazenieArray = wyrazenie.split("\\*");
-            double wynik = Double.parseDouble(wyrazenieArray[0])*Double.parseDouble(wyrazenieArray[1]);
-            return wynik;
+            return Double.parseDouble(wyrazenieArray[0])*Double.parseDouble(wyrazenieArray[1]);
         }
-
-
-        else {
+        else if (wyrazenie.indexOf('/') != -1){
             String[] wyrazenieArray = null;
             wyrazenieArray = wyrazenie.split("/");
-            double wynik = Double.parseDouble(wyrazenieArray[0])/Double.parseDouble(wyrazenieArray[1]);
-            return wynik;
+            return Double.parseDouble(wyrazenieArray[0])/Double.parseDouble(wyrazenieArray[1]);
+        }
+        else if (wyrazenie.indexOf('+') != -1 && wyrazenie.indexOf('+') != 0)
+        {
+            String[] wyrazenieArray = null;
+            wyrazenieArray = wyrazenie.split("\\+");
+            return Double.parseDouble(wyrazenieArray[0])+Double.parseDouble(wyrazenieArray[1]);
+        }
+        else if (wyrazenie.indexOf('-') != -1 && wyrazenie.indexOf('-') != 0){
+            String[] wyrazenieArray = null;
+            wyrazenieArray = wyrazenie.split("-");
+            return Double.parseDouble(wyrazenieArray[0])-Double.parseDouble(wyrazenieArray[1]);
+        }
+        else {
+            System.out.println("Błąd wpisanych znaków");
+            return 0.0;
         }
     }
 
@@ -57,6 +61,8 @@ public class OperacjaMatematyczna {
         System.out.println(interpretujOperacje(wyrazenie2));
         System.out.println(interpretujOperacje(wyrazenie3));
         System.out.println(interpretujOperacje(wyrazenie4));
+
         System.out.println(interpretujOperacje("2+2"));
+        System.out.println(interpretujOperacje("-1.0*2"));
     }
 }
