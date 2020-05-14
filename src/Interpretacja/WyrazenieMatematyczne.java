@@ -15,12 +15,12 @@ public class WyrazenieMatematyczne extends OperacjaMatematycznaZNawiasami {
     }
 
     //przyjmuje string np "((4+3)-2)*7" i oblicza wynik
-    public Double obliczWyrazenie(String wyrazenie) {
+    public double obliczWyrazenie(String wyrazenie) {
         int id_end = 0;
         int id_start = 0;
         for (int i = 0; i < wyrazenie.length(); i++) {
             if (wyrazenie.charAt(i) == ')') {
-                id_end = i+1;
+                id_end = i;
                 break;
             }
         }
@@ -30,30 +30,29 @@ public class WyrazenieMatematyczne extends OperacjaMatematycznaZNawiasami {
                 break;
             }
         }
-        String dzialanie = wyrazenie.substring(id_start, id_end);
-        String wynik = String.valueOf(interpretujOperacje(dzialanie.substring(1,dzialanie.length()-1)));
+
+
+        String dzialanie = wyrazenie.substring(id_start, id_end+1);
+
+        String wynik = String.valueOf(interpretujOperacje(dzialanie.substring(1,dzialanie.length() - 1)));
         String finalny = wyrazenie.substring(0,id_start);
         finalny += wynik;
-        finalny += wyrazenie.substring(id_end);
+        finalny += wyrazenie.substring(id_end+1);
 
         //jezeli wyrazenie nie ma zadnych znakow oprocz liczb to zwroc wynik
 
-        if (!wyrazenie.contains("(") && !wyrazenie.contains(")") && !wyrazenie.contains("\\+") &&
-                !wyrazenie.contains("-") && !wyrazenie.contains("*") && !wyrazenie.contains("\\/"))
+        if (finalny.contains("(") || finalny.contains(")") || finalny.contains("+") || finalny.contains("-") || finalny.contains("*") || finalny.contains("/"))
         {
-            return Double.valueOf(wyrazenie);
+            return obliczWyrazenie(finalny);
         }
-
         else {
-            obliczWyrazenie(finalny);
+            return Double.parseDouble(finalny);
         }
-        return 0.0;
     }
 
     public static void main(String[] args) {
         WyrazenieMatematyczne wm= new WyrazenieMatematyczne();
         System.out.println(wm.obliczWyrazenie("((45-(1*3))+45)"));
-
     }
 }
 
