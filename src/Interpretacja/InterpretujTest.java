@@ -69,16 +69,16 @@ public class InterpretujTest {
         testRówności("15*(2+1)", 45);//50
         testRówności("(5+4)*2", 18);//51
         testRówności("((6*12)+5)", 77);//52
-        testRówności("((4*7) + 4)*3", 96); // 31
-        testRówności("@ee@*@pi@", Pamięć.getConstant("ee")*Pamięć.getConstant("pi"));
-        testRówności("(([{8/2}]) - 2) * 2", 4);
-        testRówności("((2*7)-2)*2", 24);
-        testRówności("(((20/2))) - 1", 9);
-        testRówności("3 - 1", 2);
-        testRówności("(34-31)*(34-33)", 3);
-        testRówności("(25-21)*(3*3)", 36);
-        testRówności("(2*3)*(3-3)", 0);
-        testRówności("((2/2)*(3-2))", 1);
+        testRówności("((4*7) + 4)*3", 96); // 53
+        testRówności("@ee@*@pi@", Pamięć.getConstant("ee")*Pamięć.getConstant("pi")); //54
+        testRówności("(([{8/2}]) - 2) * 2", 4);//55
+        testRówności("((2*7)-2)*2", 24);//56
+        testRówności("(((20/2))) - 1", 9);//57
+        testRówności("3 - 1", 2);//58
+        testRówności("(34-31)*(34-33)", 3);//59
+        testRówności("(25-21)*(3*3)", 36);//60
+        testRówności("(2*3)*(3-3)", 0);//61
+        testRówności("((2/2)*(3-2))", 1);//62
 
 
 
