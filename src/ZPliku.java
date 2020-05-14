@@ -3,7 +3,6 @@ import java.util.Scanner;
 
 public class ZPliku {
     public static void czytaj(String filePath)  {
-
         try {
             File file = new File(filePath);
             FileReader fileReader = new FileReader(file);
@@ -24,6 +23,6 @@ public class ZPliku {
     }
 
     public static void main(String[] args) {
-
+        czytaj("D:\\sycyf_lab1\\aa.txt");//tu wpisujemy argument metody - sciezke do pliku. Do każdego slasha "\" należy dodać jeszcze jeden slash "\\"
     }
 }
