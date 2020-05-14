@@ -2,8 +2,9 @@ package Interpretacja;
 
 public class Interpreter extends WyrazenieMatematyczne {
 
-    public static void interpretuj() {
-        System.out.println("Interpretuje wyrazenia");
+    public static void interpretuj(String input)
+    {
+        System.out.println("Interpretuje wyrazenie: " + input);
     }
 
 }
