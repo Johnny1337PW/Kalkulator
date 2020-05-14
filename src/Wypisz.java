@@ -2,7 +2,8 @@ public class Wypisz {
     //przyjmuje liczbe i wypisuje ładnie
     public static void wypiszWynik(double wynik) {
 
-        System.out.println("Wynik zaimplementowanego działania to: "+wynik);
+        System.out.println("--------------------------------------");
+        System.out.println("Wynik działania to: " + wynik);
         System.out.println("--------------------------------------");
 
     }
@@ -10,6 +11,7 @@ public class Wypisz {
     //powitanie
     public static void wypiszPowitanie(String dodatkowaWiadomosc) {
 
+        System.out.println("--------------------------------------");
         System.out.println("Witaj! Jestem Kalkulator PRM2T. ");
         System.out.println("Projekt stworzony przez: Jan Lewandowski, Jan Adamski, Tomasz Kapuściński");
         System.out.println("Wykonuję obliczenia + - / * ");
@@ -22,7 +24,7 @@ public class Wypisz {
     //pozegnanie
     public static void wypiszPozegnanie(String dodatkowaWiadomosc) {
 
-
+        System.out.println("--------------------------------------");
         System.out.println("Dziękuję za skorzystanie z usług kalkulatora!");
         System.out.println(dodatkowaWiadomosc);
         System.out.println("--------------------------------------");
@@ -32,6 +34,7 @@ public class Wypisz {
     //blad
     public static void wypiszBlad(String bladInfo) {
 
+        System.out.println("--------------------------------------");
         System.out.println("Ups... Niestety wykryto błąd: "+bladInfo);
         System.out.println("--------------------------------------");
 

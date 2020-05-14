@@ -1,7 +1,12 @@
+import Interpretacja.Interpreter;
+
 public class Kalkulator {
     public void start() {
-        System.out.println("Kalkulator lipa!");
+        Wypisz.wypiszPowitanie("Wersja 1.0");
 
+        Interpreter.interpretuj();
+
+        Wypisz.wypiszPozegnanie("brak błędów");
     }
 }
 
