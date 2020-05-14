@@ -2,9 +2,18 @@ package Interpretacja;
 
 public class Interpreter extends WyrazenieMatematyczne {
 
-    public static void interpretuj(String input)
+    public static double interpretuj(String input)
     {
-        System.out.println("Interpretuje wyrazenie: " + input);
+        if(sprawdzNawiasy(input)) {
+            input = usunSpacje(input);
+            input = podmienNawiasy(input);
+            return obliczWyrazenie(input);
+        }
+        else {
+            System.out.println("Błąd w otwieraniu/zamykaniu nawiasów");
+        }
+
+        return 0.0;
     }
 
 }

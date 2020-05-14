@@ -2,20 +2,35 @@ package Interpretacja;
 
 public class WyrazenieMatematyczne extends OperacjaMatematycznaZNawiasami {
     //przyjmuje string np "( (4 +3)-2 )*7" i usuwa spacje"
-    public String usunSpacje(String wyrazenie) {
+    public static String usunSpacje(String wyrazenie) {
         wyrazenie = wyrazenie.replace(" ","");
         return wyrazenie;
     }
 
     //przyjmuje string np "[(4+3)-2]*7" i podmienia wszystkie nawiasy na okrągłe"
-    public String podmienNawiasy(String wyrazenie) {
-        wyrazenie = wyrazenie.replace("[","(");
-        wyrazenie = wyrazenie.replace("]",")");
+    public static String podmienNawiasy(String wyrazenie) {
+        while(wyrazenie.contains("[")) {
+            wyrazenie = wyrazenie.replace("[","(");
+        }
+        while(wyrazenie.contains("]")) {
+            wyrazenie = wyrazenie.replace("]",")");
+        }
+        while(wyrazenie.contains("{")) {
+            wyrazenie = wyrazenie.replace("{","(");
+        }
+        while(wyrazenie.contains("}")) {
+            wyrazenie = wyrazenie.replace("}",")");
+        }
         return wyrazenie;
     }
 
     //przyjmuje string np "((4+3)-2)*7" i oblicza wynik
-    public double obliczWyrazenie(String wyrazenie) {
+    public static double obliczWyrazenie(String wyrazenie) {
+        if (!wyrazenie.contains("(") && !wyrazenie.contains(")"))
+        {
+            return interpretujOperacje(wyrazenie);
+        }
+
         int id_end = 0;
         int id_start = 0;
         for (int i = 0; i < wyrazenie.length(); i++) {
@@ -51,8 +66,8 @@ public class WyrazenieMatematyczne extends OperacjaMatematycznaZNawiasami {
     }
 
     public static void main(String[] args) {
-        WyrazenieMatematyczne wm= new WyrazenieMatematyczne();
-        System.out.println(wm.obliczWyrazenie("((45-(1*3))+45)"));
+        System.out.println(obliczWyrazenie("((45-(1*3))+45)"));
+        System.out.println(obliczWyrazenie("2+2"));
     }
 }
 

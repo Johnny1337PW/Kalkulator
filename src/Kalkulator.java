@@ -21,7 +21,7 @@ public class Kalkulator {
                 continue;
             }
 
-            Interpreter.interpretuj(input);
+            Wypisz.wypiszWynik(Interpreter.interpretuj(input));
             Wypisz.wypiszNowaLinie();
         }
 

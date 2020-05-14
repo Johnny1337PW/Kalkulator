@@ -2,9 +2,7 @@ public class Wypisz {
     //przyjmuje liczbe i wypisuje ładnie
     public static void wypiszWynik(double wynik) {
 
-        System.out.println("--------------------------------------");
         System.out.println("Wynik działania to: " + wynik);
-        System.out.println("--------------------------------------");
 
     }
 
