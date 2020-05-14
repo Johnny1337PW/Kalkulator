@@ -46,7 +46,6 @@ public class WyrazenieMatematyczne extends OperacjaMatematycznaZNawiasami {
             }
         }
 
-
         String dzialanie = wyrazenie.substring(id_start, id_end+1);
 
         String wynik = String.valueOf(interpretujOperacje(dzialanie.substring(1,dzialanie.length() - 1)));
