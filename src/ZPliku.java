@@ -2,15 +2,10 @@ import java.io.*;
 import java.util.Scanner;
 
 public class ZPliku {
-    public static void czytaj()  {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Podaj ścieżkę do pliku txt: ");
-        String filePath = scanner.nextLine();
-        System.out.println("Podaj nazwę pliku txt (bez rozszerzenia): ");
-        String fileName = scanner.nextLine();
-        System.out.println("Path: "+filePath + '\\' + fileName+".txt");
+    public static void czytaj(String filePath)  {
+
         try {
-            File file = new File(filePath + '\\' + fileName+".txt");
+            File file = new File(filePath);
             FileReader fileReader = new FileReader(file);
             BufferedReader bufferedReader = new BufferedReader(fileReader);
             StringBuilder stringBuilder = new StringBuilder();
@@ -29,6 +24,6 @@ public class ZPliku {
     }
 
     public static void main(String[] args) {
-    czytaj();
+
     }
 }
