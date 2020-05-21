@@ -31,9 +31,9 @@ Użytkownik ma możliwość sprawdzenia wartości stałej używając wyrażenia 
 
 np.
 ```bash
-@pi
+@pi@
 >>> 3.14159
-@e
+@ee@
 >>> 2.71828
 ```
 
