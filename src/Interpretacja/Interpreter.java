@@ -1,10 +1,30 @@
 package Interpretacja;
 
 import Memory.Pamięć;
+import Plik.ZPliku;
+
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class Interpreter extends WyrazenieMatematyczne {
 
     public static String przygotuj(String input) {
+        input = podmienZPliku(input);
+        return input;
+    }
+
+    public static String podmienZPliku(String input) {
+        if (input.contains("!")) {
+            Pattern compiledPattern = Pattern.compile("!(.*)");
+            Matcher matcher = compiledPattern.matcher(input);
+
+            if (matcher.matches()) {
+                return ZPliku.czytaj(input);
+            }
+            else {
+                System.out.println("Błędny sposób użycia znaku \"!\"");
+            }
+        }
         return input;
     }
 
