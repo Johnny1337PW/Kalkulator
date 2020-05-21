@@ -32,9 +32,9 @@ Użytkownik ma możliwość sprawdzenia wartości stałej używając wyrażenia 
 np.
 ```bash
 @pi@
->>> 3.14159
+>>> Wynik działania to: 3.14159265359
 @ee@
->>> 2.71828
+>>> Wynik działania to: 2.71828182846
 ```
 
 ### 3. Wczytanie równania z pliku
@@ -48,7 +48,7 @@ n = 2.5, i = 10, i * n
 
 ```bash
 !(sciezka_do_pliku/nazwa_pliku.txt)
->>> 25
+>>> Wynik działania to: 25.0
 ```
 
 ### 4. Obliczenie równania
@@ -59,7 +59,7 @@ np.
 
 ```bash
 (4 + 4) * 2
->>> 16
+>>> Wynik działania to: 16.0
 ```
 
 ## Diagram przypadków użycia
