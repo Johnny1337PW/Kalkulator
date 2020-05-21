@@ -12,17 +12,16 @@ public class ZPliku {
             String line = bufferedReader.readLine();
             stringBuilder.append(line);
             fileReader.close();
-            System.out.println("równanie z pliku to: " + stringBuilder.toString());
             return stringBuilder.toString();
 
         } catch (FileNotFoundException e) {
-            System.out.println("Nie ma w tym katalogu takiego pliku, spróbuj jeszcze raz");
+            System.out.println("Nie istnieje plik o takiej ścieżce");
+            return "0";
         }
         catch (IOException e ){
             e.printStackTrace();
+            return "0";
         }
-
-        return "";
     }
 
     public static void main(String[] args) {

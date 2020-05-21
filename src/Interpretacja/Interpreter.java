@@ -15,14 +15,16 @@ public class Interpreter extends WyrazenieMatematyczne {
 
     public static String podmienZPliku(String input) {
         if (input.contains("!")) {
-            Pattern compiledPattern = Pattern.compile("!(.*)");
+            Pattern compiledPattern = Pattern.compile("!\\(.*\\)");
             Matcher matcher = compiledPattern.matcher(input);
 
             if (matcher.matches()) {
-                return ZPliku.czytaj(input);
+                return ZPliku.czytaj(input.substring(2, input.length() - 1));
+
             }
             else {
                 System.out.println("Błędny sposób użycia znaku \"!\"");
+                return "0";
             }
         }
         return input;
@@ -76,6 +78,7 @@ public class Interpreter extends WyrazenieMatematyczne {
         System.out.println(zamienStale("@pi@"));
         System.out.println(zamienStale("@@"));
         System.out.println(zamienStale("@pi@ + @ee@"));
+        podmienZPliku("!(test/test");
     }
 
 }

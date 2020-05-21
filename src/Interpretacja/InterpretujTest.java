@@ -88,6 +88,8 @@ public class InterpretujTest {
         testRówności("(125*5)-((1000*5)/2)", -1875); //69
         testRówności("((77)-122)*2", -90); //70
         testRówności("(((3*2)*3)-(4*2))-((18*9)+111111)", -111263); //71
-
+        testRówności("!(src/dzialanie.txt)", 18);
+        testRówności("!(src/dzialanie.txt", 0);
+        testRówności("!(src/dzialnie.txt)", 0);
     }
 }
