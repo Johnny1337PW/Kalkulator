@@ -22,7 +22,7 @@ Użytkownik ma możliwość wpisania w kalkulatorze odpowiedniego równania z do
 np.
 ```bash
 n = 4, wartosc = 4 * n - 3, wartosc
->>> 13
+>>> Wynik działania to: 13.0
 ```
 
 ### 2. Wypisanie stałej
