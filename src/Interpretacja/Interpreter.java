@@ -20,6 +20,7 @@ public class Interpreter extends WyrazenieMatematyczne {
             Matcher matcher = compiledPattern.matcher(input);
 
             if (matcher.matches()) {
+                System.out.println(ZPliku.czytaj(input.substring(2, input.length() - 1)));
                 return ZPliku.czytaj(input.substring(2, input.length() - 1));
 
             }
@@ -67,8 +68,15 @@ public class Interpreter extends WyrazenieMatematyczne {
             int ind1 = input.indexOf('&');
             int ind2 = input.indexOf('&', ind1 + 1);
             String zmienna = input.substring(ind1 + 1, ind2);
+            if(Pamięć.pobierzZmienna(zmienna) != null) {
+                input = input.substring(0, ind1) + Pamięć.pobierzZmienna(zmienna) + input.substring(ind2 + 1);
+            }
+            else {
+                Wypisz.wypiszBlad("Brak zmiennej \"" + zmienna + "\" w bazie");
+                return "0.0";
+            }
 
-            input = input.substring(0, ind1) + Pamięć.pobierzZmienna(zmienna) + input.substring(ind2 + 1);
+
         }
         return input;
     }
@@ -76,6 +84,17 @@ public class Interpreter extends WyrazenieMatematyczne {
     public static double interpretuj(String input)
     {
         input = przygotuj(input);
+
+        if(input.contains(";")) {
+            Pattern p = Pattern.compile(";");
+            String[] linie = p.split(input);
+            for(int i = 0; i < linie.length - 1; i++) {
+                Wypisz.wypiszWynik(Interpreter.interpretuj(linie[i]));
+                Wypisz.wypiszNowaLinie();
+            }
+
+            return Interpreter.interpretuj(linie[linie.length - 1]);
+        }
 
         if(sprawdzNawiasy(input)) {
             input = usunSpacje(input);

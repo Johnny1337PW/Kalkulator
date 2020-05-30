@@ -23,18 +23,8 @@ public class Kalkulator {
                 continue;
             }
 
-            if(input.contains(";")) {
-                Pattern p = Pattern.compile(";");
-                String[] linie = p.split(input);
-                for(String linia : linie) {
-                    Wypisz.wypiszWynik(Interpreter.interpretuj(linia));
-                    Wypisz.wypiszNowaLinie();
-                }
-            }
-            else {
-                Wypisz.wypiszWynik(Interpreter.interpretuj(input));
-                Wypisz.wypiszNowaLinie();
-            }
+            Wypisz.wypiszWynik(Interpreter.interpretuj(input));
+            Wypisz.wypiszNowaLinie();
         }
 
         Wypisz.wypiszPozegnanie("brak błędów");
