@@ -43,7 +43,7 @@ Jest również możliwość wczytania odpowiedniego wyrażenia z pliku txt.
 
 np. dla pliku nazwa_pliku.txt:
 ```bash
-n = 2.5, i = 10, &i& * &n&
+n = 2.5; i = 10; &i& * &n&
 ```
 
 ```bash
