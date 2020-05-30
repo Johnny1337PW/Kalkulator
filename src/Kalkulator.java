@@ -28,6 +28,7 @@ public class Kalkulator {
                 String[] linie = p.split(input);
                 for(String linia : linie) {
                     Wypisz.wypiszWynik(Interpreter.interpretuj(linia));
+                    Wypisz.wypiszNowaLinie();
                 }
             }
             else {
