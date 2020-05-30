@@ -1,5 +1,7 @@
 package Memory;
 
+import View.Wypisz;
+
 import java.lang.reflect.Field;
 
 public class Pamięć {
@@ -29,7 +31,7 @@ public class Pamięć {
             return field.getDouble(p);
         }
         catch (NoSuchFieldException | IllegalAccessException e) {
-            System.out.println("Brak stałej w bazie");
+            Wypisz.wypiszBlad("Brak stałej w bazie");
         }
         return 0.0;
     }

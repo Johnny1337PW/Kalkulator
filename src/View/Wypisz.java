@@ -1,3 +1,5 @@
+package View;
+
 public class Wypisz {
     //przyjmuje liczbe i wypisuje ładnie
     public static void wypiszWynik(double wynik) {
@@ -39,7 +41,7 @@ public class Wypisz {
 
         System.out.println("--------------------------------------");
         System.out.println("Dziękuję za skorzystanie z usług kalkulatora!");
-        System.out.println(dodatkowaWiadomosc);
+        //System.out.println(dodatkowaWiadomosc);
         System.out.println("--------------------------------------");
 
     }
@@ -47,6 +49,7 @@ public class Wypisz {
     //blad
     public static void wypiszBlad(String bladInfo) {
 
+        System.out.println();
         System.out.println("--------------------------------------");
         System.out.println("Ups... Niestety wykryto błąd: "+bladInfo);
         System.out.println("--------------------------------------");

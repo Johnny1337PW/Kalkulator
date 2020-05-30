@@ -2,6 +2,7 @@ package Interpretacja;
 
 import Memory.Pamięć;
 import Plik.ZPliku;
+import View.Wypisz;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -23,7 +24,7 @@ public class Interpreter extends WyrazenieMatematyczne {
 
             }
             else {
-                System.out.println("Błędny sposób użycia znaku \"!\"");
+                Wypisz.wypiszBlad("Błędny sposób użycia znaku \"!\"");
                 return "0";
             }
         }
@@ -32,7 +33,7 @@ public class Interpreter extends WyrazenieMatematyczne {
 
     public static String zamienStale(String input) {
         if(input.contains("@") && input.length() < 4) {
-            System.out.println("Błąd przy użyciu stałej");
+            Wypisz.wypiszBlad("Błąd przy użyciu stałej");
             return "0.0";
         }
         while(input.contains("@")) {
@@ -43,12 +44,12 @@ public class Interpreter extends WyrazenieMatematyczne {
                             input = input.replace(input.substring(i - 3, i + 1), String.valueOf(Pamięć.getConstant(input.substring(i - 2, i))));
                         }
                         else {
-                            System.out.println("Błąd w użyciu stałej, źle ustawiony znak \"@\"");
+                            Wypisz.wypiszBlad("Błąd w użyciu stałej, źle ustawiony znak \"@\"");
                             return "0.0";
                         }
                     }
                     else {
-                        System.out.println("Błąd w użyciu stałej, źle ustawiony znak \"@\"");
+                        Wypisz.wypiszBlad("Błąd w użyciu stałej, źle ustawiony znak \"@\"");
                         return "0.0";
                     }
                 }
@@ -68,7 +69,7 @@ public class Interpreter extends WyrazenieMatematyczne {
             return obliczWyrazenie(input);
         }
         else {
-            System.out.println("Błąd w otwieraniu/zamykaniu nawiasów");
+            Wypisz.wypiszBlad("Błąd w otwieraniu/zamykaniu nawiasów");
         }
 
         return 0.0;

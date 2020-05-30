@@ -1,5 +1,5 @@
 package Plik;
-
+import View.Wypisz;
 import java.io.*;
 
 public class ZPliku {
@@ -15,7 +15,7 @@ public class ZPliku {
             return stringBuilder.toString();
 
         } catch (FileNotFoundException e) {
-            System.out.println("Nie istnieje plik o takiej ścieżce");
+            Wypisz.wypiszBlad("Nie istnieje plik o takiej ścieżce");
             return "0";
         }
         catch (IOException e ){

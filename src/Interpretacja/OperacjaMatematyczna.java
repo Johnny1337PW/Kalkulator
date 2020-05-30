@@ -1,5 +1,7 @@
 package Interpretacja;
 
+import View.Wypisz;
+
 public class OperacjaMatematyczna {
     private String [] mozliweZnaki = {"+", "-", "/", "*"};
 
@@ -18,7 +20,7 @@ public class OperacjaMatematyczna {
         }
 
         if (wyrazenie.indexOf('-') == -1 && wyrazenie.indexOf('+') == -1 && wyrazenie.indexOf('*') == -1 && wyrazenie.indexOf('/') == -1) {
-            System.out.println("Wprowadzono niepoprawne wyrażenie");
+            Wypisz.wypiszBlad("Wprowadzono niepoprawne wyrażenie");
             return 0.0;
         }
         else if (wyrazenie.indexOf('*') != -1)
@@ -44,7 +46,7 @@ public class OperacjaMatematyczna {
             return Double.parseDouble(wyrazenieArray[0])-Double.parseDouble(wyrazenieArray[1]);
         }
         else {
-            System.out.println("Błąd wpisanych znaków");
+            Wypisz.wypiszBlad("Błąd wpisanych znaków");
             return 0.0;
         }
     }
