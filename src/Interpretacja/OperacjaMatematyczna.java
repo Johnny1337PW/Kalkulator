@@ -7,48 +7,55 @@ public class OperacjaMatematyczna {
 
     // np. "4/2", "3*3", "1-2", "4.5+1"
     public static Double interpretujOperacje(String wyrazenie) {
-        if(!wyrazenie.contains("+") && !wyrazenie.contains("-") && !wyrazenie.contains("/") && !wyrazenie.contains("*")) {
-            return Double.valueOf(wyrazenie);
+        try {
+            if(!wyrazenie.contains("+") && !wyrazenie.contains("-") && !wyrazenie.contains("/") && !wyrazenie.contains("*")) {
+                return Double.valueOf(wyrazenie);
+            }
+
+            if(wyrazenie.contains("+-")) {
+                wyrazenie = wyrazenie.replace("+-", "-");
+            }
+
+            if(wyrazenie.contains("-+")) {
+                wyrazenie = wyrazenie.replace("-+", "-");
+            }
+
+            if (wyrazenie.indexOf('-') == -1 && wyrazenie.indexOf('+') == -1 && wyrazenie.indexOf('*') == -1 && wyrazenie.indexOf('/') == -1) {
+                Wypisz.wypiszBlad("Wprowadzono niepoprawne wyrażenie");
+                return 0.0;
+            }
+            else if (wyrazenie.indexOf('*') != -1)
+            {
+                String[] wyrazenieArray = null;
+                wyrazenieArray = wyrazenie.split("\\*");
+                return Double.parseDouble(wyrazenieArray[0])*Double.parseDouble(wyrazenieArray[1]);
+            }
+            else if (wyrazenie.indexOf('/') != -1){
+                String[] wyrazenieArray = null;
+                wyrazenieArray = wyrazenie.split("/");
+                return Double.parseDouble(wyrazenieArray[0])/Double.parseDouble(wyrazenieArray[1]);
+            }
+            else if (wyrazenie.indexOf('+') != -1 && wyrazenie.indexOf('+') != 0)
+            {
+                String[] wyrazenieArray = null;
+                wyrazenieArray = wyrazenie.split("\\+");
+                return Double.parseDouble(wyrazenieArray[0])+Double.parseDouble(wyrazenieArray[1]);
+            }
+            else if (wyrazenie.indexOf('-') != -1 && wyrazenie.indexOf('-') != 0){
+                String[] wyrazenieArray = null;
+                wyrazenieArray = wyrazenie.split("-");
+                return Double.parseDouble(wyrazenieArray[0])-Double.parseDouble(wyrazenieArray[1]);
+            }
+            else {
+                Wypisz.wypiszBlad("Błąd wpisanych znaków");
+                return 0.0;
+            }
+        }
+        catch(NumberFormatException nfe) {
+            Wypisz.wypiszBlad("Podano liczbę w niepoprawnym formacie");
         }
 
-        if(wyrazenie.contains("+-")) {
-            wyrazenie = wyrazenie.replace("+-", "-");
-        }
-
-        if(wyrazenie.contains("-+")) {
-            wyrazenie = wyrazenie.replace("-+", "-");
-        }
-
-        if (wyrazenie.indexOf('-') == -1 && wyrazenie.indexOf('+') == -1 && wyrazenie.indexOf('*') == -1 && wyrazenie.indexOf('/') == -1) {
-            Wypisz.wypiszBlad("Wprowadzono niepoprawne wyrażenie");
-            return 0.0;
-        }
-        else if (wyrazenie.indexOf('*') != -1)
-        {
-            String[] wyrazenieArray = null;
-            wyrazenieArray = wyrazenie.split("\\*");
-            return Double.parseDouble(wyrazenieArray[0])*Double.parseDouble(wyrazenieArray[1]);
-        }
-        else if (wyrazenie.indexOf('/') != -1){
-            String[] wyrazenieArray = null;
-            wyrazenieArray = wyrazenie.split("/");
-            return Double.parseDouble(wyrazenieArray[0])/Double.parseDouble(wyrazenieArray[1]);
-        }
-        else if (wyrazenie.indexOf('+') != -1 && wyrazenie.indexOf('+') != 0)
-        {
-            String[] wyrazenieArray = null;
-            wyrazenieArray = wyrazenie.split("\\+");
-            return Double.parseDouble(wyrazenieArray[0])+Double.parseDouble(wyrazenieArray[1]);
-        }
-        else if (wyrazenie.indexOf('-') != -1 && wyrazenie.indexOf('-') != 0){
-            String[] wyrazenieArray = null;
-            wyrazenieArray = wyrazenie.split("-");
-            return Double.parseDouble(wyrazenieArray[0])-Double.parseDouble(wyrazenieArray[1]);
-        }
-        else {
-            Wypisz.wypiszBlad("Błąd wpisanych znaków");
-            return 0.0;
-        }
+        return 0.0;
     }
 
     public static void main(String[] args) {

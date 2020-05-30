@@ -2,6 +2,7 @@ import Interpretacja.Interpreter;
 import View.Wypisz;
 
 import java.util.Scanner;
+import java.util.regex.Pattern;
 
 public class Kalkulator {
     public void start() {
@@ -22,8 +23,17 @@ public class Kalkulator {
                 continue;
             }
 
-            Wypisz.wypiszWynik(Interpreter.interpretuj(input));
-            Wypisz.wypiszNowaLinie();
+            if(input.contains(";")) {
+                Pattern p = Pattern.compile(";");
+                String[] linie = p.split(input);
+                for(String linia : linie) {
+                    Wypisz.wypiszWynik(Interpreter.interpretuj(linia));
+                }
+            }
+            else {
+                Wypisz.wypiszWynik(Interpreter.interpretuj(input));
+                Wypisz.wypiszNowaLinie();
+            }
         }
 
         Wypisz.wypiszPozegnanie("brak błędów");

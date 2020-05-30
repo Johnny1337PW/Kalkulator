@@ -21,7 +21,7 @@ Użytkownik ma możliwość wpisania w kalkulatorze odpowiedniego równania z do
 
 np.
 ```bash
-n = 4, wartosc = 4 * n - 3, wartosc
+n = 4; wartosc = (4 * &n&) - 3; &wartosc&
 >>> Wynik działania to: 13.0
 ```
 
@@ -43,7 +43,7 @@ Jest również możliwość wczytania odpowiedniego wyrażenia z pliku txt.
 
 np. dla pliku nazwa_pliku.txt:
 ```bash
-n = 2.5, i = 10, i * n
+n = 2.5, i = 10, &i& * &n&
 ```
 
 ```bash

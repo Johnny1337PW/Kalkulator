@@ -58,6 +58,21 @@ public class Interpreter extends WyrazenieMatematyczne {
         return input;
     }
 
+    public static String zamienZmienne(String input) {
+        if(input.contains("&") && input.length() < 3) {
+            Wypisz.wypiszBlad("Błąd przy użyciu zmiennej");
+            return "0.0";
+        }
+        while(input.contains("&")) {
+            int ind1 = input.indexOf('&');
+            int ind2 = input.indexOf('&', ind1 + 1);
+            String zmienna = input.substring(ind1 + 1, ind2);
+
+            input = input.substring(0, ind1) + Pamięć.pobierzZmienna(zmienna) + input.substring(ind2 + 1);
+        }
+        return input;
+    }
+
     public static double interpretuj(String input)
     {
         input = przygotuj(input);
@@ -66,7 +81,23 @@ public class Interpreter extends WyrazenieMatematyczne {
             input = usunSpacje(input);
             input = podmienNawiasy(input);
             input = zamienStale(input);
-            return obliczWyrazenie(input);
+            input = zamienZmienne(input);
+
+            if(input.contains("=")) {
+                int index = input.indexOf("=");
+                String name = input.substring(0, index);
+                String value = input.substring(index + 1);
+
+                try {
+                    Pamięć.dodajZmienna(name, Interpreter.interpretuj(value));
+                }
+                catch (NumberFormatException nfe){
+                    Wypisz.wypiszBlad("Podano liczbę w błednym formacie");
+                }
+            }
+            else {
+                return obliczWyrazenie(input);
+            }
         }
         else {
             Wypisz.wypiszBlad("Błąd w otwieraniu/zamykaniu nawiasów");

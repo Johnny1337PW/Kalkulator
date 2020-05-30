@@ -1,5 +1,7 @@
 package Interpretacja;
 
+import View.Wypisz;
+
 public class WyrazenieMatematyczne extends OperacjaMatematycznaZNawiasami {
     //przyjmuje string np "( (4 +3)-2 )*7" i usuwa spacje"
     public static String usunSpacje(String wyrazenie) {
@@ -26,6 +28,7 @@ public class WyrazenieMatematyczne extends OperacjaMatematycznaZNawiasami {
 
     //przyjmuje string np "((4+3)-2)*7" i oblicza wynik
     public static double obliczWyrazenie(String wyrazenie) {
+
         if (!wyrazenie.contains("(") && !wyrazenie.contains(")"))
         {
             return interpretujOperacje(wyrazenie);

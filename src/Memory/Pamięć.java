@@ -3,6 +3,7 @@ package Memory;
 import View.Wypisz;
 
 import java.lang.reflect.Field;
+import java.util.HashMap;
 
 public class Pamięć {
     //Stałe matematyczne
@@ -23,6 +24,23 @@ public class Pamięć {
     private static double gz = 9.81;//przyspieszenie ziemskie
     private static double hu = 77;//stała Hubble’a
     private static double om = 0.0224136;//Objętość molowa gazu w warunkach normalnych
+
+    private static HashMap <String, Double> zmienne = new HashMap<>();
+
+    public static void dodajZmienna(String nazwa, Double wartosc) {
+        zmienne.put(nazwa, wartosc);
+    }
+
+    public static Double pobierzZmienna(String nazwa) {
+        try {
+            return zmienne.get(nazwa);
+        }
+        catch(Error e) {
+            Wypisz.wypiszBlad(e.getMessage());
+        }
+
+        return null;
+    }
 
     public static double getConstant(String constant) {
         Pamięć p = new Pamięć();
