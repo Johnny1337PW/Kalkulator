@@ -27,7 +27,7 @@ public class Kalkulator {
             Wypisz.wypiszNowaLinie();
         }
 
-        Wypisz.wypiszPozegnanie("brak błędów");
+        Wypisz.wypiszPozegnanie("Brak błędów");
     }
 }
 

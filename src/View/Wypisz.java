@@ -24,7 +24,9 @@ public class Wypisz {
     //pomoc
     public static void wypiszPomoc() {
         System.out.println("--------------------------------------");
-        System.out.println("Wykonuję obliczenia + - / * ");
+        System.out.println("Wykonuję obliczenia: +, -, /, * ");
+        System.out.println("Potrafię obsługiwać zmienne - przykład użycia wpisanie: n = 2.5; i = 10; &i&*&n& -> zwroci wynik 25");
+        System.out.println("Aby skorzystać z poniższych stałych wpisz @nazwa_stalej@ np. @pi@. Przykładowo @pi@*2 -> zwroci wynik 6.28318530718 ");
         System.out.println("Dostepne stale: Liczba pi - pi, Liczba eulera - ee, Stała eulera - eu, Złoty podział - fi");
         System.out.println("Dostepne stale: Stala Chinczyna - ch, Stała Apery'ego, Stała Mertensa stała Catalana");
         System.out.println("Dostepne stale: Stała Sierpińskiego - si, Stała Gaussa - ga, Stała Apery'ego - ap, Stała mertensa - mt, Stała Catalana - ct");
@@ -40,7 +42,7 @@ public class Wypisz {
     public static void wypiszPozegnanie(String dodatkowaWiadomosc) {
 
         System.out.println("--------------------------------------");
-        System.out.println("Dziękuję za skorzystanie z usług kalkulatora!");
+        System.out.println("Dziękujęmy za skorzystanie z naszego kalkulatora!");
         //System.out.println(dodatkowaWiadomosc);
         System.out.println("--------------------------------------");
 
@@ -65,7 +67,7 @@ public class Wypisz {
                         "błąd: nie wykonuję potęgowania \n" +
                         "błąd: aaa";
         wypiszPowitanie("Wersja 1.0");
-        wypiszBlad("podales zle dzialanie");
+        wypiszBlad("Podales nieprawidłowe działanie");
         wypiszWynik(19);
         wypiszPozegnanie(string);
     }
