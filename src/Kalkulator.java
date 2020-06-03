@@ -1,5 +1,6 @@
 import Interpretacja.Interpreter;
 import View.Wypisz;
+import Memory.Pamięć;
 
 import java.util.Scanner;
 import java.util.regex.Pattern;
@@ -20,6 +21,17 @@ public class Kalkulator {
 
             if(input.equals("help")) {
                 Wypisz.wypiszPomoc();
+                continue;
+            }
+
+            if(input.equals("clear")) {
+                Pamięć.wyczyscZmienne();
+                Wypisz.wypiszWyczyszczenie();
+                continue;
+            }
+
+            if(input.equals("list")) {
+                Wypisz.wypiszZmienne(Pamięć.pobierzZmienne());
                 continue;
             }
 

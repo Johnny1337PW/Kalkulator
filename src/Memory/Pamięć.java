@@ -42,6 +42,14 @@ public class Pamięć {
         return null;
     }
 
+    public static void wyczyscZmienne() {
+        zmienne.clear();
+    }
+
+    public static HashMap <String, Double> pobierzZmienne() {
+        return zmienne;
+    }
+
     public static double getConstant(String constant) {
         Pamięć p = new Pamięć();
         try {

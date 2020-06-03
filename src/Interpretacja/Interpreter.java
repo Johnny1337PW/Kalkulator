@@ -106,9 +106,12 @@ public class Interpreter extends WyrazenieMatematyczne {
                 int index = input.indexOf("=");
                 String name = input.substring(0, index);
                 String value = input.substring(index + 1);
+                double val;
 
                 try {
-                    Pamięć.dodajZmienna(name, Interpreter.interpretuj(value));
+                    val = Double.parseDouble(value);
+                    Pamięć.dodajZmienna(name, val);
+                    return val;
                 }
                 catch (NumberFormatException nfe){
                     Wypisz.wypiszBlad("Podano liczbę w błednym formacie");

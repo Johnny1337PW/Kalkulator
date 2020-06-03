@@ -1,5 +1,8 @@
 package View;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class Wypisz {
     //przyjmuje liczbe i wypisuje ładnie
     public static void wypiszWynik(double wynik) {
@@ -33,8 +36,10 @@ public class Wypisz {
         System.out.println("Dostepne stale: Predkosc swiatla - cl, Masa unitu - un, Stała gazowa - nr, Przysp. ziemskie - gz");
         System.out.println("Dostepne stale: Stala Hubble'a - hu, Objętość molowa gazu w warunkach normalnych - om");
         System.out.println("Możesz wpisać dowolne działanie opierające się o te znaki w konsoli lub pliku txt. ");
-        System.out.println("Aby zakończyć wpisz: \"exit\"");
         System.out.println("Aby uzyskać pomoc wpisz: \"help\"");
+        System.out.println("Aby usunąć wszystkie zmienne wpisz: \"clear\"");
+        System.out.println("Aby wypisać wszystkie zmienne wpisz: \"list\"");
+        System.out.println("Aby zakończyć wpisz: \"exit\"");
         System.out.println("--------------------------------------");
     }
 
@@ -44,6 +49,30 @@ public class Wypisz {
         System.out.println("--------------------------------------");
         System.out.println("Dziękujęmy za skorzystanie z naszego kalkulatora!");
         //System.out.println(dodatkowaWiadomosc);
+        System.out.println("--------------------------------------");
+
+    }
+
+    //wyczyszczenie zmiennych
+    public static void wypiszWyczyszczenie() {
+
+        System.out.println("--------------------------------------");
+        System.out.println("Wszystkie zmienne zostały usunięte");
+        System.out.println("--------------------------------------");
+
+    }
+
+    //wyczyszczenie zmiennych
+    public static void wypiszZmienne(HashMap <String, Double> zmienne) {
+
+        System.out.println("--------------------------------------");
+        System.out.println("Wszystkie zapisane zmienne:");
+        for (Map.Entry<String, Double> entry : zmienne.entrySet()) {
+            String name = entry.getKey();
+            double value = entry.getValue();
+
+            System.out.println(name + " - " + value);
+        }
         System.out.println("--------------------------------------");
 
     }
