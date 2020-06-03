@@ -27,7 +27,7 @@ public class WyrazenieMatematyczne extends OperacjaMatematycznaZNawiasami {
     }
 
     //przyjmuje string np "((4+3)-2)*7" i oblicza wynik
-    public static double obliczWyrazenie(String wyrazenie) {
+    public static Double obliczWyrazenie(String wyrazenie) {
 
         if (!wyrazenie.contains("(") && !wyrazenie.contains(")"))
         {

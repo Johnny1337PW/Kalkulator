@@ -35,8 +35,12 @@ public class Kalkulator {
                 continue;
             }
 
-            Wypisz.wypiszWynik(Interpreter.interpretuj(input));
-            Wypisz.wypiszNowaLinie();
+            Double wynik = Interpreter.interpretuj(input);
+            if (wynik != null) {
+                Wypisz.wypiszWynik(wynik);
+                Wypisz.wypiszNowaLinie();
+            }
+
         }
 
         Wypisz.wypiszPozegnanie("Brak błędów");

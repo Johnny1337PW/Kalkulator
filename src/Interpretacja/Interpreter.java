@@ -20,13 +20,13 @@ public class Interpreter extends WyrazenieMatematyczne {
             Matcher matcher = compiledPattern.matcher(input);
 
             if (matcher.matches()) {
-                System.out.println(ZPliku.czytaj(input.substring(2, input.length() - 1)));
+                Wypisz.wypisz(ZPliku.czytaj(input.substring(2, input.length() - 1)));
                 return ZPliku.czytaj(input.substring(2, input.length() - 1));
 
             }
             else {
                 Wypisz.wypiszBlad("Błędny sposób użycia znaku \"!\"");
-                return "0";
+                return "0.0";
             }
         }
         return input;
@@ -81,7 +81,7 @@ public class Interpreter extends WyrazenieMatematyczne {
         return input;
     }
 
-    public static double interpretuj(String input)
+    public static Double interpretuj(String input)
     {
         input = przygotuj(input);
 
@@ -104,17 +104,14 @@ public class Interpreter extends WyrazenieMatematyczne {
 
             if(input.contains("=")) {
                 int index = input.indexOf("=");
-                String name = input.substring(0, index);
+                String name = input.substring(0, index).strip();
                 String value = input.substring(index + 1);
-                double val;
 
-                try {
-                    val = Double.parseDouble(value);
+                Double val = Interpreter.interpretuj(value);
+
+                if(val != null) {
                     Pamięć.dodajZmienna(name, val);
                     return val;
-                }
-                catch (NumberFormatException nfe){
-                    Wypisz.wypiszBlad("Podano liczbę w błednym formacie");
                 }
             }
             else {
@@ -123,9 +120,10 @@ public class Interpreter extends WyrazenieMatematyczne {
         }
         else {
             Wypisz.wypiszBlad("Błąd w otwieraniu/zamykaniu nawiasów");
+            return null;
         }
 
-        return 0.0;
+        return null;
     }
 
     public static void main(String[] args) {

@@ -22,7 +22,7 @@ public class OperacjaMatematyczna {
 
             if (wyrazenie.indexOf('-') == -1 && wyrazenie.indexOf('+') == -1 && wyrazenie.indexOf('*') == -1 && wyrazenie.indexOf('/') == -1) {
                 Wypisz.wypiszBlad("Wprowadzono niepoprawne wyrażenie");
-                return 0.0;
+                return null;
             }
             else if (wyrazenie.indexOf('*') != -1)
             {
@@ -48,14 +48,13 @@ public class OperacjaMatematyczna {
             }
             else {
                 Wypisz.wypiszBlad("Błąd wpisanych znaków");
-                return 0.0;
+                return null;
             }
         }
         catch(NumberFormatException nfe) {
             Wypisz.wypiszBlad("Podano liczbę w niepoprawnym formacie");
+            return null;
         }
-
-        return 0.0;
     }
 
     public static void main(String[] args) {
