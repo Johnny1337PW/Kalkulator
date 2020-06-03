@@ -53,12 +53,11 @@ public class Wypisz {
     }
 
     //pozegnanie
-    public static void wypiszPozegnanie(String dodatkowaWiadomosc) {
+    public static void wypiszPozegnanie() {
 
         if(!czyTest) {
             System.out.println("--------------------------------------");
             System.out.println("Dziękujęmy za skorzystanie z naszego kalkulatora!");
-            //System.out.println(dodatkowaWiadomosc);
             System.out.println("--------------------------------------");
         }
 
@@ -117,12 +116,9 @@ public class Wypisz {
     }
 
     public static void main(String[] args) {
-        String string = "błąd: dzielenie przez 0 \n" +
-                        "błąd: nie wykonuję potęgowania \n" +
-                        "błąd: aaa";
         wypiszPowitanie("Wersja 1.0");
         wypiszBlad("Podales nieprawidłowe działanie");
         wypiszWynik(19d);
-        wypiszPozegnanie(string);
+        wypiszPozegnanie();
     }
 }

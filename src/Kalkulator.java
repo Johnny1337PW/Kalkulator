@@ -3,14 +3,13 @@ import View.Wypisz;
 import Memory.Pamięć;
 
 import java.util.Scanner;
-import java.util.regex.Pattern;
 
 public class Kalkulator {
     public void start() {
         Wypisz.wypiszPowitanie("Wersja 1.0");
 
         Scanner scanner = new Scanner(System.in);
-        String input = "";
+        String input;
 
         while(true) {
             input = scanner.nextLine();
@@ -43,7 +42,7 @@ public class Kalkulator {
 
         }
 
-        Wypisz.wypiszPozegnanie("Brak błędów");
+        Wypisz.wypiszPozegnanie();
     }
 }
 
