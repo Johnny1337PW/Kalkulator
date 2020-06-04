@@ -27,7 +27,7 @@ n = 4; wartosc = (4 * &n&) - 3; &wartosc&
 
 ### 2. Wypisanie stałej
 
-Użytkownik ma możliwość sprawdzenia wartości stałej używając wyrażenia '@nazwastałej':
+Użytkownik ma możliwość sprawdzenia wartości stałej używając wyrażenia '@nazwastałej@':
 
 np.
 ```bash
