@@ -44,6 +44,8 @@ public class Wypisz {
             System.out.println("Dostepne stale: Predkosc swiatla - cl, Masa unitu - un, Stała gazowa - nr, Przysp. ziemskie - gz");
             System.out.println("Dostepne stale: Stala Hubble'a - hu, Objętość molowa gazu w warunkach normalnych - om");
             System.out.println("Możesz wpisać dowolne działanie opierające się o te znaki w konsoli lub pliku txt. ");
+            System.out.println("Aby skorzystać z działania z pliku txt. !(sciezka_do_pliku\\nazwa_pliku.txt)");
+            System.out.println("Ważne żebyś w miejscu Slasha / wpisał dwa odwotne slashe \\! ");
             System.out.println("Aby uzyskać pomoc wpisz: \"help\"");
             System.out.println("Aby usunąć wszystkie zmienne wpisz: \"clear\"");
             System.out.println("Aby wypisać wszystkie zmienne wpisz: \"list\"");
